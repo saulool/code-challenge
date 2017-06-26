@@ -1,0 +1,21 @@
+<main class="vote container">
+	<section>
+		<div class="title">
+			<h1>Choose a restaurant</h1>
+		</div>
+		<div class="alert alert-dismissible" role="alert" ng-if="voteCtrl.message" ng-class="{ 'alert-danger' : voteCtrl.message.error, 'alert-success' : !voteCtrl.message.error}">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="voteCtrl.removeMessage()"><span aria-hidden="true">&times;</span></button>
+			{{voteCtrl.message.message}}
+		</div>
+		<ul class="restaurants">
+			<li class="restaurant" ng-repeat="restaurant in voteCtrl.restaurants track by restaurant.id">
+				<div class="panel panel-default">
+					<div class="panel-heading">{{restaurant.name}}</div>
+					<div class="panel-body">
+						<a ng-click="voteCtrl.vote(restaurant.id)">Vote now</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+</main>

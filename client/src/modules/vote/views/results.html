@@ -1,0 +1,21 @@
+<main class="results container">
+	<section>
+		<div class="chosen-restaurant" ng-if="resultsCtrl.chosenRestaurant">
+			<h1>Results</h1>
+			<div>Chosen restaurant: {{::resultsCtrl.chosenRestaurant.name}}</div>
+		</div>
+		<div class="title" ng-if="!resultsCtrl.chosenRestaurant">
+			<h1>Results so far</h1>
+		</div>
+		<ul class="restaurants" ng-if="!resultsCtrl.chosenRestaurant">
+			<li class="restaurant" ng-repeat="restaurant in resultsCtrl.restaurants | orderBy: '-votes' track by restaurant.id">
+				<div class="panel panel-default">
+					<div class="panel-heading">{{::restaurant.name}}</div>
+					<div class="panel-body">
+						Votes: {{restaurant.votes}}
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+</main>

@@ -1,0 +1,27 @@
+<main class="home">
+	<section class="countdown">
+		<div class="title">
+			<h1 ng-if="!homeCtrl.haveNoonPassed">Time until next lunch</h1>
+			<h1 ng-if="homeCtrl.haveNoonPassed">You can't vote anymore. Come back tomorrow.</h1>
+		</div>
+		<div class="timer" ng-if="!homeCtrl.haveNoonPassed">
+			<div class="hours">
+				<div class="value">{{homeCtrl.hoursLeft}}</div>
+				<div class="label">Hours</div>
+			</div>
+			<div class="minutes">
+				<div class="value">{{homeCtrl.minutesLeft}}</div>
+				<div class="label">Minutes</div>
+			</div>
+			<div class="seconds">
+				<div class="value">{{homeCtrl.secondsLeft}}</div>
+				<div class="label">Seconds</div>
+			</div>
+		</div>
+		
+		<div class="actions">
+			<a class="button" ui-sref="vote" ng-if="!homeCtrl.haveNoonPassed">Vote</a>
+			<a class="button" ui-sref="results">See Results</a>
+		</div>
+	</section>
+</main>
