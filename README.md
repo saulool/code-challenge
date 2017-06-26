@@ -9,7 +9,7 @@ This application lacks a database so, everything here is mocked in server-side a
 Some rules:
 1. You can't vote in a restaurant if it's after noon
 2. You can only vote once a day
-3. Every noon the application will select the restaurant with more votes and remove it from the list of votable restaurants
+3. By the noon there is a cron job that will select the restaurant with more votes and remove it from the list of votable restaurants
 4. By the end of the day (23:59) there is a cron job that will clear the votes for all restaurants that can be choosed
 5. By the end of the week (Sunday - 23:59) there is a cron job that will restore all restaurants
 
