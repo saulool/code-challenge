@@ -43,6 +43,7 @@ You can run `npm run test:client` and `npm run test:server` for running unit tes
 3. Integration testing
 4. A login feature
 5. Making stubs for tests
+6. Real time voting through sockets
 
 
 ![alt text](https://i.imgur.com/AwjSJjd.png)
