@@ -1,8 +1,9 @@
 class Restaurant {
-	constructor(id, name, votes = 0) {
+	constructor(id, name, image, votes) {
 		this.id = id;
 		this.name = name;
 		this.votes = votes;
+		this.image = image;
 	}
 }
 

@@ -14,6 +14,63 @@
 			.panel-heading{
 				background-color: @secundary-color;
 				color: white;
+				border-bottom-color: darken(@secundary-color, 20%);
+			}
+
+			.panel-body{
+				padding: 0;
+				text-align: center;
+
+				.image{
+					display: block;
+					height: 80px;
+					width: 100%;
+					background-size: 100%;
+					background-position: 100%;
+					background-repeat: no-repeat;
+				}
+
+				.vote{
+					padding: 10px;
+				    text-align: center;
+				    display: block;
+				    color: @primary-color;
+				    cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.results{
+	.restaurant{
+		width: 33%;
+		display: inline-block;
+		padding: 10px 20px;
+
+		.panel-heading{
+			background-color: @secundary-color;
+			color: white;
+			border-bottom-color: darken(@secundary-color, 20%);
+		}
+
+		.panel-body{
+			padding: 0;
+
+			.image{
+				display: block;
+				height: 80px;
+				width: 100%;
+				background-size: 100%;
+				background-position: 100%;
+				background-repeat: no-repeat;
+			}
+
+			.votes{
+				padding: 10px;
+			    text-align: center;
+			    display: block;
+			    color: @primary-color;
 			}
 		}
 	}

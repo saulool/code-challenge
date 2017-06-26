@@ -6,7 +6,8 @@
   "scripts": {
     "test:client": "karma start karma.conf.js",
     "test:server": "babel ./server/src --out-dir ./server/compiled --copy-files && cd ./server/compiled/ && istanbul cover --dir ../../coverage-server --include-all-sources --report html jasmine-node **",
-    "build:env": "npm install && babel ./server/src --out-dir ./server/compiled --copy-files && webpack --config ./client/webpack.config.js --progress --colors && node app.js"
+    "build:env": "npm install && babel ./server/src --out-dir ./server/compiled --copy-files && webpack --config ./client/webpack.config.js --progress --colors",
+    "start:env": "npm install && babel ./server/src --out-dir ./server/compiled --copy-files && webpack --config ./client/webpack.config.js --progress --colors && node app.js"
   },
   "author": "",
   "license": "ISC",

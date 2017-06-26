@@ -12,7 +12,9 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">{{restaurant.name}}</div>
 					<div class="panel-body">
-						<a ng-click="voteCtrl.vote(restaurant.id)">Vote now</a>
+						<div class="image" style="background-image: url({{restaurant.image}});">
+						</div>
+						<a class="vote" ng-click="voteCtrl.vote(restaurant.id)">Vote now</a>
 					</div>
 				</div>
 			</li>

@@ -1,5 +1,6 @@
 import restaurantIntegration from '../../compiled/integration/RestaurantIntegration';
 import moment from 'moment';
+import {DATEFORMAT} from '../constants/constants';
 
 module.exports = {
 	getRestaurants,
@@ -33,7 +34,7 @@ function chooseRestaurant(){
 
 	restaurantToChoose = {
 		...restaurantToChoose,
-		dateChoosed: moment().format('MM/DD/YYYY')
+		dateChoosed: moment().format(DATEFORMAT)
 	}
 
 	restaurantsChosen.push(restaurantToChoose);
@@ -69,27 +70,3 @@ function clearChosenRestaurants(){
 function restoreRestaurants(){
 	restaurants = restaurantIntegration.getRestaurants();
 }
-
-
-//--------------------------------
-//import RestaurantIntegration from '../../compiled/integration/RestaurantIntegration';
-/*let RestaurntService = (RestaurantIntegration) => {
-	return {
-		function getRestaurants(){
-			return RestaurantIntegration.getRestaurants();
-		}
-	}
-}*/
-
-//-------------------------------
-
-/*
-let mockRestaurantIntegration = () => {
-	return {
-		getRestaurants: () => {
-			return [];
-		}
-	}
-}
-
-let result = new RestaurntService(mockRestaurantIntegration);*/

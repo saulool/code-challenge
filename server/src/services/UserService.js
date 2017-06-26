@@ -1,5 +1,6 @@
 import userIntegration from '../../compiled/integration/UserIntegration';
 import moment from 'moment';
+import {DATEFORMAT, TIMEFORMAT} from '../constants/constants';
 
 module.exports = {
 	getUser,
@@ -24,11 +25,11 @@ function canUserVote(user, time){
 function haventUserVotedToday(lastVote){
 	let today = moment();
 
-	return lastVote && today.diff(moment(lastVote, 'MM/DD/YYYY'), 'days') > 0;
+	return lastVote && today.diff(moment(lastVote, DATEFORMAT), 'days') > 0;
 }
 
 function haventPassedNoon(time){
-	const noonTime = moment('12:00:00', 'HH:mm:ss');
+	const noonTime = moment('12:00:00', TIMEFORMAT);
 
 	return noonTime.diff(time) > 0;
 }
