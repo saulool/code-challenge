@@ -32,7 +32,7 @@ Some rules:
 - Karma, Jasmine & Istanbul
 
 ## How do I run it?
-Having Node.js and NPM installed, just type `npm run build:env` and then go to `http://localhost:3000/client/compiled/#!/`
+Having Node.js and NPM installed, just type `npm run start:env` and then go to `http://localhost:3000/client/compiled/#!/`
 
 ## How do I test it?
 You can run `npm run test:client` and `npm run test:server` for running unit testing with a code coverage report as output located in the root folder.
