@@ -64,6 +64,7 @@ module.exports = function(config) {
     files: [
         './node_modules/jquery/dist/jquery.js',
         './client/compiled/vendor.js',
+        './node_modules/angular/angular.js',
         './node_modules/angular-mocks/angular-mocks.js',
         './client/src/index.spec.js'
     ],
