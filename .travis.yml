@@ -1,7 +1,8 @@
 language: node_js
 node_js:
   - "8"
-script:
+before_script:
   - npm run test
   - npm run start:env
+script:
   - npm run cypress
