@@ -9,7 +9,7 @@
     "test": "npm install && npm run test:client && npm run test:server",
     "cypress": "./node_modules/cypress/bin/cypress run",
     "build:env": "npm install && babel ./server/src --out-dir ./server/compiled --copy-files && webpack --config ./client/webpack.config.js --progress --colors",
-    "start:env": "npm install && babel ./server/src --out-dir ./server/compiled --copy-files && webpack --config ./client/webpack.config.js --progress --colors && node app.js"
+    "start:env": "node app.js"
   },
   "author": "",
   "license": "ISC",
