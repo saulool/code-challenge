@@ -9,7 +9,8 @@
     "test": "npm install && npm run test:client && npm run test:server",
     "cypress": "./node_modules/cypress/bin/cypress run",
     "build:env": "npm install && babel ./server/src --out-dir ./server/compiled --copy-files && webpack --config ./client/webpack.config.js --progress --colors",
-    "start:env": "node app.js"
+    "start:env": "node app.js",
+    "test:ci": "start-server-and-test start:env http://localhost:3000 cypress"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +21,8 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "moment": "^2.18.1",
-    "node-schedule": "^1.2.3"
+    "node-schedule": "^1.2.3",
+    "start-server-and-test": "^1.7.9"
   },
   "devDependencies": {
     "angular-mocks": "^1.6.4",
