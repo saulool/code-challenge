@@ -10,7 +10,7 @@
     "cypress": "./node_modules/cypress/bin/cypress run",
     "build:env": "npm install && babel ./server/src --out-dir ./server/compiled --copy-files && webpack --config ./client/webpack.config.js --progress --colors",
     "start:env": "node app.js",
-    "test:ci": "start-server-and-test start:env http://localhost:3000 cypress"
+    "test:ci": "start-test http://localhost:3000 cypress"
   },
   "author": "",
   "license": "ISC",
