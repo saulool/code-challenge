@@ -4,7 +4,7 @@
 It's described as a voting facilitator tool for lunch.
 
 ## How this application works?
-This application lacks a database so, everything here is mocked in server-side and there's no login.
+This application lacks a database so everything here is mocked on the server and there's no login.
 
 Some rules:
 1. You can't vote in a restaurant if it's after noon
@@ -38,7 +38,7 @@ Having Node.js and NPM installed, just type `npm run start:env` and then go to `
 You can run `npm run test:client` and `npm run test:server` for running unit testing with a code coverage report as output located in the root folder.
 
 ## What more (or better) could have been done?
-1. Have more coverage in the server side
+1. Have more coverage on the server
 2. E2E testing
 3. Integration testing
 4. A login feature
