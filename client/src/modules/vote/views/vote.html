@@ -5,7 +5,7 @@
 		</div>
 		<div class="alert alert-dismissible" role="alert" ng-if="voteCtrl.message" ng-class="{ 'alert-danger' : voteCtrl.message.error, 'alert-success' : !voteCtrl.message.error}">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="voteCtrl.removeMessage()"><span aria-hidden="true">&times;</span></button>
-			{{voteCtrl.message.message}}
+			<span class="message">{{voteCtrl.message.message}}</span>
 		</div>
 		<ul class="restaurants">
 			<li class="restaurant" ng-repeat="restaurant in voteCtrl.restaurants track by restaurant.id">
